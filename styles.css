@@ -1,5 +1,22 @@
 /* Doctype CSS */
-.mainContainer{
-    display: flex;
-    flex-wrap: wrap;
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin:16px;
+}
+
+.gridContainer{
+    display: grid;
+    grid-template-columns: repeat(16,1fr);
+    height: 95vh;
+}
+
+.gridItem{
+    border:1px solid green;
+}
+
+.drawn{
+    background-color: blueviolet;
 }

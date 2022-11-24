@@ -5,12 +5,13 @@
 
 body{
     margin:16px;
+    height: 95vh;
 }
 
 .gridContainer{
     display: grid;
     grid-template-columns: repeat(16,1fr);
-    height: 95vh;
+    height: 90vh;
 }
 
 .gridItem{
@@ -19,4 +20,12 @@ body{
 
 .drawn{
     background-color: blueviolet;
+}
+#reset{
+    padding: 8px;
+}
+.controls{
+    display: flex;
+    justify-content: center;
+    margin: 8px 0px 16px 0px;
 }

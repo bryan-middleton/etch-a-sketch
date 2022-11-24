@@ -15,3 +15,8 @@ boxes.forEach((box) => {
     box.addEventListener('mouseover',()=>{
         box.classList.add('drawn') });
     });
+
+function resetGrid(){
+    boxes.forEach((box)=>{
+            box.classList.remove('drawn') });
+        };

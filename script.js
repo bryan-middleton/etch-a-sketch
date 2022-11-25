@@ -17,8 +17,8 @@ function drawGrid(size){
 function draw(){
     const boxes = document.querySelectorAll('.gridItem');
     boxes.forEach((box) => {
-    let randomColor = [Math.floor(Math.random()*256),Math.floor(Math.random()*256),Math.floor(Math.random()*256),];
     box.addEventListener('mouseover',()=>{
+        let randomColor = [Math.floor(Math.random()*256),Math.floor(Math.random()*256),Math.floor(Math.random()*256),];
         box.style.backgroundColor='rgb('+randomColor[0]+','+randomColor[1]+','+randomColor[2]+')' });
     });
 }
@@ -39,6 +39,7 @@ boxes.forEach((box) => {
     });
 
 function resetGrid(){
+    const boxes = document.querySelectorAll('.gridItem');
     boxes.forEach((box)=>{
             box.style.backgroundColor='white' });
-        };
+    }

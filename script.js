@@ -1,22 +1,41 @@
 // Doctype javascript
 
 
-//create 256 divs and add to container
-for(let i=1;i<257;i++){
-    const div = document.createElement('div');
-    div.classList.add('gridItem');
-    div.textContent = i; //debugging
-    document.getElementById('gridContainer').appendChild(div);
+//create user-specified number of divs and add to container
+function drawGrid(size){
+    const container = document.querySelector('.gridContainer');
+    container.style.gridTemplateColumns = 'repeat('+size+',1fr)';
+    for(let i=0;i<size**2;i++){
+        const div = document.createElement('div');
+        div.classList.add('gridItem');
+        div.textContent = i; //debugging
+        document.getElementById('gridContainer').appendChild(div);
+    }
+    draw();
 }
 
-//add class when mouse hovers over box
+function draw(){
+    const boxes = document.querySelectorAll('.gridItem');
+    boxes.forEach((box) => {
+    let randomColor = [Math.floor(Math.random()*256),Math.floor(Math.random()*256),Math.floor(Math.random()*256),];
+    box.addEventListener('mouseover',()=>{
+        box.style.backgroundColor='rgb('+randomColor[0]+','+randomColor[1]+','+randomColor[2]+')' });
+    });
+}
+
+function start(){
+    let size = prompt('Enter number of rows/columns');
+    drawGrid(size);
+}
+
 const boxes = document.querySelectorAll('.gridItem');
 boxes.forEach((box) => {
+    let randomColor = [Math.floor(Math.random()*256),Math.floor(Math.random()*256),Math.floor(Math.random()*256),];
     box.addEventListener('mouseover',()=>{
-        box.classList.add('drawn') });
+        box.style.backgroundColor='rgb('+randomColor[0]+','+randomColor[1]+','+randomColor[2]+')' });
     });
 
 function resetGrid(){
     boxes.forEach((box)=>{
-            box.classList.remove('drawn') });
+            box.style.backgroundColor='white' });
         };

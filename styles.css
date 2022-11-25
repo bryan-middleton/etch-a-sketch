@@ -10,7 +10,6 @@ body{
 
 .gridContainer{
     display: grid;
-    grid-template-columns: repeat(16,1fr);
     height: 90vh;
 }
 
@@ -19,7 +18,7 @@ body{
 }
 
 .drawn{
-    background-color: blueviolet;
+    background-color: rgb(138, 43, 226);
 }
 #reset{
     padding: 8px;

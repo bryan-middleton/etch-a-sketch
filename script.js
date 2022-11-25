@@ -8,7 +8,7 @@ function drawGrid(size){
     for(let i=0;i<size**2;i++){
         const div = document.createElement('div');
         div.classList.add('gridItem');
-        div.textContent = i; //debugging
+        //div.textContent = i; //debugging
         document.getElementById('gridContainer').appendChild(div);
     }
     draw();
@@ -24,6 +24,9 @@ function draw(){
 }
 
 function start(){
+    const boxes = document.querySelectorAll('.gridItem');
+    boxes.forEach((box) => {
+        box.remove()});//resets grid    
     let size = prompt('Enter number of rows/columns');
     drawGrid(size);
 }

@@ -1,5 +1,7 @@
 // Doctype javascript
-
+function defaultGrid(){
+    drawGrid(16);//default grid
+}
 
 //create user-specified number of divs and add to container
 function drawGrid(size){

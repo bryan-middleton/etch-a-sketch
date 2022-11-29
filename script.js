@@ -27,7 +27,12 @@ function start(){
     const boxes = document.querySelectorAll('.gridItem');
     boxes.forEach((box) => {
         box.remove()});//resets grid    
-    let size = prompt('Enter number of rows/columns');
+    let size = prompt('Enter number of rows/columns (maximum: 100');
+    //check for valid input
+    while(isNaN(size) || size<1 || size>100){
+        alert('Invalid input');
+        size = prompt('Enter number of rows/columns (maximum: 100');
+    }
     drawGrid(size);
 }
 

@@ -1,49 +1,50 @@
 /* Doctype CSS */
-*{
-    box-sizing: border-box;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+* {
+  box-sizing: border-box;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
-body{
-    background-color: darkcyan;
-    margin: 0px;
+body {
+  background-color: darkcyan;
+  margin: 0px;
 }
 
-h1{
-    text-align: center;
-    color: azure;
+h1 {
+  text-align: center;
+  color: azure;
 }
-.uiContainer{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 90vh;
-    background-color: lightskyblue;
-}
-
-.gridContainer{
-    display: grid;
-    max-height: 70vh;
-    min-height: 70vh;
-    border: 2px ridge green;
-    min-width: 50vw;
+.uiContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 90vh;
+  background-color: lightskyblue;
 }
 
-.gridItem{
-    border:1px solid green;
-    background-color: white;
+.gridContainer {
+  display: grid;
+  max-height: 70vh;
+  min-height: 70vh;
+  border: 2px ridge green;
+  min-width: 50vw;
 }
 
-.controls{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-self: center;
+.gridItem {
+  border: 1px solid green;
+  background-color: white;
 }
 
-.controls button{
-    font-size:larger;
-    margin: 8px;
-    padding: 8px;
+.controls {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-self: center;
+}
+
+.controls button {
+  font-size: larger;
+  margin: 8px;
+  padding: 8px;
 }
